@@ -10,8 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 connectToDB();
 
-app.get("/", userRoutes);
-app.post("/createUser", userRoutes);
-// app.put("/editUser/:id", userRoutes);
+app.use("/", userRoutes);   //use my home route and then use any route post put delete etc
 
 module.exports = app;
